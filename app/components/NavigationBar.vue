@@ -6,7 +6,7 @@
         <div class="navbar-brand">
           <nuxt-link to="/" class="navbar-item">
             <!-- <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo"> -->
-            CERES
+            Thoth
           </nuxt-link>
           <span class="navbar-burger burger" data-target="navbarMenuHeroB" @click="$store.commit('toggleMenu')" :class="{'is-active': $store.state.isMenuActive}">
             <span></span>
@@ -18,7 +18,6 @@
           <div class="navbar-end">
             <nuxt-link to="/" class="navbar-item ">Top</nuxt-link>
             <nuxt-link to="/give" class="navbar-item">Give</nuxt-link>
-            <nuxt-link to="/about" class="navbar-item">About</nuxt-link>
             <nuxt-link to="/contact" class="navbar-item">Contact</nuxt-link>
           </div>
         </div>

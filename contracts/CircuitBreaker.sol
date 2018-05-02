@@ -13,6 +13,10 @@ contract CircuitBreaker is Ownable {
         require(!stopped);
         _;
     }
+
+    function CircuitBreaker() public {
+        stopped = false;
+    }
     
     // 停止フラグの制御
     function toggleCircuit(bool _stopped) public onlyOwner {
