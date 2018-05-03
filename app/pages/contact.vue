@@ -13,6 +13,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'contact'
+    }
+  },
   fetch ({store}) {
     store.commit('resetMenu')
   }

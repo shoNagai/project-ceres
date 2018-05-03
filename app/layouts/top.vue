@@ -1,21 +1,15 @@
 <template>
   <div>
-    <navbar/>
     <nuxt/>
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/NavigationBar.vue'
-
 export default {
   head() {
     return {
       titleTemplate: '%s | Thoth'
     }
-  },
-  components: {
-    Navbar
   }
 }
 </script>

@@ -17,7 +17,8 @@
         <div id="navbarMenuHeroB" class="navbar-menu"  :class="{'is-active': $store.state.isMenuActive}">
           <div class="navbar-end">
             <nuxt-link to="/" class="navbar-item ">Top</nuxt-link>
-            <nuxt-link to="/give" class="navbar-item">Give</nuxt-link>
+            <nuxt-link to="/knowledgeList" class="navbar-item">List</nuxt-link>
+            <nuxt-link to="/postKnowledge" class="navbar-item">Post</nuxt-link>
             <nuxt-link to="/contact" class="navbar-item">Contact</nuxt-link>
           </div>
         </div>

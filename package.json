@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "bulma": "^0.7.1",
+    "firebase": "^4.13.1",
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
     "sass-loader": "^7.0.1",
+    "vuexfire": "^2.3.0",
     "web3": "^0.20.0"
   },
   "devDependencies": {
