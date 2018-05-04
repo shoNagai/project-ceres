@@ -1,4 +1,6 @@
-import getContract from '../utils/getContract'
+import getContract from '../../utils/getContract'
+
+const namespaced = true
 
 export const state = () => ({
   contractInstance: null
@@ -17,4 +19,11 @@ export const actions = {
       commit('registerContractInstance', result)
     }).catch(e => console.log(e))
   }
+}
+
+export default {
+  namespaced,
+  state,
+  actions,
+  mutations
 }

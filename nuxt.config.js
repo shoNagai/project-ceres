@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -13,6 +15,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  // mode: 'spa',
   /*
   ** Customize the progress bar color
   */
@@ -21,6 +24,9 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
+  router: {
+    middleware: 'authenticated'
+  },
   plugins: [
   ],
   /*
@@ -51,6 +57,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      config.plugins.push(
+        new webpack.EnvironmentPlugin(['APIKEY', 'AUTHDOMAIN', 'DATABASEURL', 'PROJECTID', 'STORAGEBUCKET', 'MESSAGINGSENDERID'])
+      )
     }
   }
 }

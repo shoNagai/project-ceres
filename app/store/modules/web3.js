@@ -1,4 +1,6 @@
-import getWeb3 from '../utils/getWeb3'
+import getWeb3 from '../../utils/getWeb3'
+
+const namespaced = true
 
 export const state = () => ({
   isInjected: false,
@@ -27,4 +29,11 @@ export const actions = {
       console.log('error in action registerWeb3', e)
     })
   }
+}
+
+export default {
+  namespaced,
+  state,
+  actions,
+  mutations
 }

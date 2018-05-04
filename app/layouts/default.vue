@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <navbar/>
-    <nuxt/>
-  </div>
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+      <navbar/>
+    </div>
+    <div class="hero-body">
+      <nuxt/>
+    </div>
+  </section>
 </template>
 
 <script>

@@ -1,37 +1,42 @@
 <template>
   <div class="container">
     <div class="column is-8 is-offset-2">
-      <section class="hero is-bold">
-        <div class="hero-body">
-          <h1 class="title is-size-2">
-            Post Knowledge
-          </h1>
-          <h2 class="subtitle is-size-4">
-            You can post your knowledge for the world.
-          </h2>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Title</label>
         </div>
-        <div class="columns">
-          <div class="column  is-half">
-                  <input class="input" type="text" name="title" id="title" placeholder="title input" v-model="title">
-          </div>
-          </div>
+        <div class="field-body">
           <div class="field">
-            <p class="control">
-              <textarea class="textarea" name="content" id="content" placeholder="Add a content..." v-model="content"></textarea>
-            </p>
-          </div>
-          <nav class="level">
-            <div class="level-left">
-              <div class="level-item">
-                <a class="button is-dark" @click="postKnowledge">Submit</a>
-              </div>
+            <div class="control">
+              <input class="input" type="text" name="title" id="title" placeholder="title input" v-model="title">
             </div>
-          </nav>
-          <div >
-            <div class="message" v-if="message">{{message}}</div>
-            <div class="tx_hash" v-if="tx_hash">Tx Hash: <a v-bind:href="tx_url">{{tx_hash}}</a></div>
           </div>
-      </section>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Content</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" name="content" id="content" placeholder="Add a content..." v-model="content"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary">Post knowledge</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -40,7 +45,7 @@
 export default {
   head() {
     return {
-      title: 'post'
+      title: 'edit'
     }
   },
   data() {
@@ -53,7 +58,7 @@ export default {
     }
   },
   fetch ({store}) {
-    store.commit('resetMenu')
+    store.commit('menu/resetMenu')
   },
   mounted () {
     console.log('dispatching registerWeb3')

@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="column is-8 is-offset-2">
-      <div class="card article"  v-for="(knowledge, key, index) in knowledges" :key="index" >
+      <div class="card article"  v-for="(knowledge, key, index) in knowledges" :key="index"  >
         <div class="card-content">
           <div class="media">
-            <p>Title: {{ knowledge.title }}</p>
+            <a :href="`/knowledges/${knowledge.id}`" class="" ><p>{{ knowledge.title }}</p></a>
           </div>
           <div class="content article-body">
-            <p>Content: {{ knowledge.content }}</p>
+            <p>Referred: {{ knowledge.numReferred }}</p>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@ export default {
     }
   },
   fetch ({store}) {
-    store.commit('resetMenu')
+    store.commit('menu/resetMenu')
   },
   mounted () {
     console.log('dispatching registerWeb3')
@@ -66,7 +66,7 @@ export default {
             "id": null,
             "title": null,
             "content": null,
-            "numReferred": null
+            "numReferred": null,
           }
           knowledge.id = knowledgeId
           knowledge.title = result[0].toString()
