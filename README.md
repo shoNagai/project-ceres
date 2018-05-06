@@ -22,7 +22,7 @@ $ npm run generate
 ## Truffle Setup
 
 ``` bash
-# deploy ganache
+# deploy ganache localhost
 truffle migrate --network dev
 
 ```
