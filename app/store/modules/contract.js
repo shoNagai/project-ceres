@@ -17,7 +17,9 @@ export const actions = {
   getContractInstance ({commit}) {
     getContract.then(result => {
       commit('registerContractInstance', result)
-    }).catch(e => console.log(e))
+    }).catch(err => {
+      console.log(err);
+    });
   }
 }
 

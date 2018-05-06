@@ -17,7 +17,7 @@
         <div id="navbarMenuHeroB" class="navbar-menu"  :class="{'is-active': $store.state.menu.isMenuActive}">
           <div class="navbar-end">
             <nuxt-link to="/" class="navbar-item ">Top</nuxt-link>
-            <nuxt-link to="/knowledges" class="navbar-item">List</nuxt-link>
+            <nuxt-link to="/knowledgeList" class="navbar-item">List</nuxt-link>
             <nuxt-link to="/knowledgeEdit" class="navbar-item">Edit</nuxt-link>
             <nuxt-link to="/contact" class="navbar-item">Contact</nuxt-link>
             <span class="navbar-item">

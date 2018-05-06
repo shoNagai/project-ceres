@@ -5,7 +5,7 @@ const namespaced = true
 export const state = () => ({
   isInjected: false,
   web3Instance: null,
-  account: null,
+  coinbase: null,
   error: null
 })
 
@@ -13,7 +13,7 @@ export const mutations = {
   registerWeb3Instance (state, payload) {
     console.log('registerWeb3instance Mutation being executed', payload)
     let result = payload
-    state.account = result.account
+    state.coinbase = result.coinbase
     state.isInjected = result.injectedWeb3
     state.web3Instance = result.web3
   }

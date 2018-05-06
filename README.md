@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ npm install # Or yarn
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -17,6 +17,14 @@ $ npm start
 
 # generate static project
 $ npm run generate
+```
+
+## Truffle Setup
+
+``` bash
+# deploy ganache
+truffle migrate --network dev
+
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

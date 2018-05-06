@@ -18,6 +18,13 @@ export default {
   },
   fetch ({store}) {
     store.commit('menu/resetMenu')
+  },
+  mounted () {
+    console.log('dispatching registerWeb3')
+    this.$store.dispatch('web3/registerWeb3').then(() => {
+      console.log('dispatching getContractInstance')
+      this.$store.dispatch('contract/getContractInstance')
+    })
   }
 }
 </script>

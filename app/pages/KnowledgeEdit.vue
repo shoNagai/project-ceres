@@ -32,7 +32,7 @@
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <button class="button is-primary">Post knowledge</button>
+              <button class="button is-primary" @click="postKnowledge">Post knowledge</button>
             </div>
           </div>
         </div>
@@ -62,16 +62,17 @@ export default {
   },
   mounted () {
     console.log('dispatching registerWeb3')
-    this.$store.dispatch('web3/registerWeb3')
-    console.log('dispatching getContractInstance')
-    this.$store.dispatch('contract/getContractInstance')
+    this.$store.dispatch('web3/registerWeb3').then(() => {
+      console.log('dispatching getContractInstance')
+      this.$store.dispatch('contract/getContractInstance')
+    })
   },
   methods: {
     postKnowledge() {
       this.message = "Transaction started";
       console.log("call methods postKnowledge")
       this.$store.state.contract.contractInstance().postKnowledge(this.title, this.content, {
-        from: this.$store.state.web3.account[0],
+        from: this.$store.state.web3.coinbase,
         gas: 500000
       }, (err, result) => {
         if (err) {

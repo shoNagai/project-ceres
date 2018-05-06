@@ -19,7 +19,7 @@
     "nuxt": "^1.0.0",
     "sass-loader": "^7.0.1",
     "vuexfire": "^2.3.0",
-    "web3": "^0.20.0"
+    "web3": "^0.20.6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
